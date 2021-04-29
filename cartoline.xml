@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE teiCorpus SYSTEM "tei_all.dtd">
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:id="main">
+        <fileDesc>
+            <titleStmt>
+                <!-- TITOLO NB: non corrisponde completamente alla voce TITOLO della tabella perché si tratta del titolo della edizione digitale -->
+                <title> Progetto d'esame Codifica di Testi a.a. 2019/2020</title>
+                <!-- TRASCRITTORE nome e cognome-->
+                <respStmt>
+                    <resp>Trascritto da</resp>
+                    <name xml:id="SDG">Stefania De Gennaro</name>
+                </respStmt>
+                <!-- ENTE DI APPARTENENZA -->
+                <respStmt xml:id="ente">
+                    <resp>Ente di appartenenza</resp>
+                    <name type="comune" xml:id="SP">Comune della Spezia</name>
+                </respStmt>
+            </titleStmt>
+
+            <editionStmt>
+                <edition>Studenti di Informatica Umanistica, Corso di Laurea Triennale in Informatica Umanistica, Università di Pisa
+                <date>2020</date>
+                </edition>
+
+                <!-- NOME COMPILATORE-->
+                <respStmt>
+                    <resp>Codificato da</resp>
+                    <name xml:id="TC">Tommaso Castagneto</name>
+                </respStmt>
+
+                <!-- REFERENTE SCIENTIFICO sempre Nome Cognome, XY2 è sempre Tommaso Castagneto, XZ1 è chi interviene sulla schedatura già fatta per correzioni e aggiunte-->
+                <respStmt>
+                    <resp>Compilatore:</resp>
+                    <name ref="#TC">Tommaso Castagneto, </name>
+                </respStmt>
+                
+                <respStmt>
+                    <resp>Responsabile scientifico:</resp>
+                    <name xml:id="GP">Giacomo Paolicchi, </name>
+                    <name xml:id="ES">Enrica Salvatori</name>
+                </respStmt>
+
+                <respStmt>
+                    <resp>Funzionario responsabile:</resp>
+                    <name xml:id="ER">E. Ratti</name>
+                </respStmt>
+            </editionStmt>
+
+            <publicationStmt>
+                <publisher>Unipi</publisher>
+                <pubPlace>Pisa</pubPlace>
+                <availability>
+                    <p>Disponibile solo su licenza</p>
+                </availability>
+                <date when="2020">2020</date>
+                <distributor>LabCD</distributor>
+                <address>
+                    <addrLine>Laboratorio di Cultura Digitale - Università di Pisa</addrLine>
+                    <addrLine>Pisa</addrLine>
+                </address>
+            </publicationStmt>
+
+            <sourceDesc>
+                <bibl>
+                    <interp>
+                        Tre cartoline del 1900, due pubblicate dall'Ufficio Rev. Stampa a Milano nel 1917  e una dalla compagnia londinese Raphael Tuck &amp; Sons in Inghilterra nel 1903.
+                    </interp>
+                </bibl>
+                
+                
+                <!-- Nomi -->
+                <listPerson>
+                    <person xml:id="GC">
+                        <persName>
+                            <forename>Giovanni</forename>
+                            <surname>Coliola</surname>
+                        </persName>
+                        <sex>M</sex>
+                        <occupation n="1">[maggiore]</occupation>
+                    </person>
+                    <person xml:id="OT">
+                        <persName>
+                            <forename>Oliva</forename>
+                            <surname>Turtura</surname>
+                        </persName>
+                        <sex>F</sex>
+                    </person>
+                </listPerson>
+
+                <listPlace>
+                    <place xml:id="RV">
+                        <placeName>Ravenna</placeName>
+                        <settlement type="località">città</settlement>
+                        <district type="comune">Ravenna</district>
+                        <district type="provincia">RV</district>
+                        <country key="N">IT</country>
+                    </place>
+                    <place xml:id="MO">
+                        <placeName>Modena</placeName>
+                        <settlement>città</settlement>
+                        <district type="comune">Modena</district>
+                        <district type="provincia">MO</district>
+                        <country key="N">IT</country>
+                    </place>
+                </listPlace>
+
+            </sourceDesc>               
+        </fileDesc>
+    </teiHeader>
+
+    <TEI xml:id="c127">
+        <teiHeader>
+            <!-- metadati relativi alla prima cartolina -->
+            <fileDesc>
+                <titleStmt>
+                    <!-- Non corrisponde completamente alla voce TITOLO della tabella perché si tratta del titolo della edizione digitale -->
+                    <title>The Bairnie's Breakfast - Edizione digitale</title>
+                </titleStmt>
+                <publicationStmt>
+                    <publisher>Unipi</publisher>
+                    <pubPlace>Pisa</pubPlace>
+                </publicationStmt>
+
+                <!-- Tutto ciò che non rientra nella codifica -->
+                <notesStmt>
+                    <note>
+                        Sul fronte troviamo stampato il titolo dell'opera. Sul retro troviamo una stampa che riporta il titolo dell'opera con una breve descrizione (in inglese) e "Scottish Life and Character" Series IV  Raphael Tuck &amp; Sons' "OILETTE" Postcard no 9479 ART PUBLISHER TO THEIR MAJESTIES THE KING &amp; QUEEN After the original painting by H.J.Dobson A.R.C.A. , R.S.W.
+                    </note>
+                </notesStmt>
+
+                <sourceDesc>
+                    <bibl>
+                        <!-- TITOLO quello che si ricava dalla cartolina; se un documento composto da immagini non presenta un titolo o altri elementi considerabili come titolo, si formula un titolo sintetico registrandolo entro parentesi quadre ma indicando dentro la codifica -->
+                        <title>The Bairnie's Breakfast</title>
+                        <!-- Produzione: chi ha prodotto / pubblicato la cartolina. Se non presente togliere il tag -->
+                        <publisher>Raphael Tuck &amp; Sons</publisher>
+                        <!-- Luogo -->
+                        <pubPlace>England</pubPlace>
+                        <date>1903</date>
+                    </bibl>
+
+                    <msDesc>
+                        <!-- collocazione specifica -->
+                        <msIdentifier>
+                            <country>Italia</country>
+                            <settlement>La Spezia (SP)</settlement>
+                            <repository>Museo Civico Etnografico "Giovanni Podenzana", Sezione dei cimeli garibaldini e della Prima Guerra Mondiale</repository>
+                            <!-- codice identificativo -->
+                            <idno>7694_127_001/002</idno>
+                        </msIdentifier>
+
+                        <!-- Informazioni sul contenuto della cartolina -->
+                        <!-- DESCRIZIONE -->
+                        <msContents>
+                            <summary>Cartolina Artistica</summary>
+                            <textLang>Italiano</textLang>
+                        </msContents>
+
+                        <physDesc>
+                            <objectDesc>
+                                <supportDesc>
+                                    <support>
+                                        <objectType>Cartolina</objectType>
+                                        <!-- Materiali -->
+                                        <material>Carta</material>
+                                        <!-- Dimensione -->
+                                        <dimensions unit="cm">
+                                            <height>9</height>
+                                            <width>14</width>
+                                        </dimensions>
+                                        <stamp>francobollo - Regno d'Italia</stamp>
+                                    </support>
+
+                                    <!-- Conservazione
+                                    buono = non occorrono interventi di restauro;
+                                    discreto = perfettamente leggibile in tutte le componenti ma con rischi di deterioramento per usura;
+                                    mediocre = perfettamente leggibile, ma mancano alcune sue parti;
+                                    cattivo = intaccato da parassiti o deteriorato da cattivi interventi passati o mancanti di parti rilevanti, necessita di restauro -->
+                                    <condition>Buono, non occorrono interventi di restauro</condition>
+                                </supportDesc>
+                            </objectDesc>
+                        </physDesc>
+                    </msDesc>
+                </sourceDesc>
+            </fileDesc>
+
+            <profileDesc>
+                <correspDesc>
+                    <correspAction type="sent">
+                        <persName ref="#GC">Giovanni Coliola</persName>
+                        <placeName ref="#MO">Modena</placeName>
+                        <!-- Data di invio da timbro (postage) o da manoscritto (writing) -->
+                        <date type="writing" when="1917-07-28">1917/07/28</date>
+                        <date type="postage" when="1917-07-28">1917/07/28</date>
+                    </correspAction>
+
+                    <correspAction type="received">
+                        <persName ref="#OT">Oliva Turtura</persName>
+                        <placeName ref="#RV">Ravenna</placeName>
+                    </correspAction>
+                </correspDesc>
+
+                <textClass>
+                    <keywords>
+                        <!-- soggettario -->
+                        <!-- tipologia -->
+                        <!-- descrizione -->
+                        <term>Cartolina</term>
+                        <term>Cartolina Artistica</term>
+                        <term>Coppia di innamorati</term>
+                    </keywords>
+                </textClass>
+
+                <langUsage>
+                    <language ident="it-IT">italiano</language>
+                </langUsage>
+            </profileDesc>
+        </teiHeader>
+
+        <facsimile>
+            <!-- Fronte -->
+            <surface type="fronte" xml:id="fronte127">
+                <graphic url="IMG/127F.jpg"/>
+            </surface>
+
+            <!-- Retro -->
+            <surface type="retro" xml:id="retro127">
+                <graphic url="IMG/127R.jpg"/>
+                <zone xml:id="idno127" ulx="607" uly="151" lrx="667" lry="189"/>
+                <zone xml:id="stemmaReale" ulx="68" uly="49" lrx="145" lry="112"/>
+                <zone xml:id="marchio" ulx="16" uly="397" lrx="38" lry="424"/>
+                <zone xml:id="primaTypo127" ulx="3" uly="355" lrx="13" lry="424"/>
+                <zone xml:id="secondaTypo127" ulx="25" uly="430" lrx="128" lry="444"/>
+                <zone xml:id="terzaTypo127" ulx="185" uly="60" lrx="518" lry="88"/>
+                <zone xml:id="quartaTypo127" ulx="281" uly="98" lrx="378" lry="109"/>
+                <zone xml:id="quintaTypo127" ulx="397" uly="129" lrx="515" lry="143"/>
+                <zone xml:id="sestaTypo127" ulx="3" uly="51" lrx="15" lry="301"/>
+                <zone xml:id="settimaTypo127" ulx="22" uly="86" lrx="33" lry="374"/>
+                <zone xml:id="ottavaTypo127" ulx="37" uly="97" lrx="47" lry="362"/>
+                <zone xml:id="nonaTypo127" ulx="46" uly="68" lrx="58" lry="388"/>
+                <zone xml:id="decimaTypo127" ulx="64" uly="111" lrx="155" lry="125"/>
+                <zone xml:id="undicesimaTypo127" ulx="63" uly="128" lrx="183" lry="140"/>
+                <zone xml:id="dodicesimaTypo127" ulx="82" uly="140" lrx="298" lry="179"/>
+                <zone xml:id="luogoData127" ulx="286" uly="121" lrx="323" lry="437"/>
+                <zone xml:id="primaRiga127" ulx="226" uly="108" lrx="259" lry="430"/>
+                <zone xml:id="secondaRiga127" ulx="182" uly="121" lrx="198" lry="439"/>
+                <zone xml:id="terzaRiga127" ulx="90" uly="197" lrx="166" lry="427"/> 
+                <zone xml:id="timbro127" ulx="515" uly="4" lrx="671" lry="143"/>
+                <zone xml:id="primaRigaAddr127" ulx="346" uly="157" lrx="610" lry="206"/>
+                <zone xml:id="secondaRigaAddr127" ulx="351" uly="226" lrx="677" lry="260"/>
+                <zone xml:id="terzaRigaAddr127" ulx="348" uly="273" lrx="695" lry="302"/>
+                <zone xml:id="quartaRigaAddr127" ulx="421" uly="330" lrx="671" lry="406"/>
+
+            </surface>
+        </facsimile>
+
+        <!-- DEFINIZIONE -->
+        <text type="cartolina" xml:id="cartolina127">
+
+            <!-- TRASCRIZIONE -->
+            <body>
+                <div type="fronte">
+                    <figure>
+                        <graphic url="IMG/127F.jpg"/>
+                        <figDesc>
+                            L'immagine è ambientata in un'antica cucina con una pentola sul fuoco. Seduta vi è una donna con due bambine intente a fare colazione, una in braccio, l'altra di fronte a lei. È presente anche un gatto steso sul pavimento alla destra della donna. Nell'illustrazione, in basso a destra è presente il titolo della cartolina, <mentioned>THE BAIRNIE'S BREAKFAST.</mentioned>
+                        </figDesc>
+                        <head>The Bairnie's Breakfast - H.J.Dobson</head>
+                    </figure>
+                </div>
+
+                <div type="retro">
+                    <div type="codice">
+                        <p>
+                            <num type="cardinal">
+                                <idno facs="#idno127">127</idno>
+                            </num>
+                        </p>
+                    </div>
+
+                    <div type="typography" xml:lang="en">
+                        <p><stamp type="typography" facs="#stemmaReale">
+                            Stemma reale britannico
+                        </stamp></p>
+                        <p><stamp type="typography" facs="#marchio">
+                            <unclear reason="faded">Marchio Tuck</unclear>
+                        </stamp></p>
+                        <p><stamp type="typography" facs="#primaTypo127">
+                            Copyright <placeName>London</placeName>
+                        </stamp></p>
+                        <p><stamp type="typography" facs="#secondaTypo127">
+                            Printed in <placeName>England</placeName>
+                        </stamp></p>
+                        <p><stamp type="typography" facs="#terzaTypo127">
+                            TUCK<pc type="apostrofo">'</pc>S POST CARD
+                        </stamp></p>
+                        <p><stamp type="typography" facs="#quartaTypo127">
+                            CARTE POSTALE<pc type="punto">.</pc>
+                        </stamp></p>
+                        <p><stamp type="typography" facs="#quintaTypo127">
+                            <pc type="parentesi">(</pc>For Address Only<pc type="parentesi">)</pc>
+                        </stamp></p>
+                        <p><stamp type="typography" facs="#sestaTypo127">
+                            <pc type="virgolette">"</pc>SCOTTISH LIFE AND CHARACTER<pc type="punto">.</pc><pc type="virgolette">"</pc> Series <num type="ordinal">IV</num><pc type="punto">.</pc>
+                        </stamp></p>
+                        <p><stamp type="typography" facs="#settimaTypo127">
+                            Raphael Tuck &amp; Sons<pc type="apostrofo">'</pc> <pc type="virgolette">"</pc>OILETTE<pc type="virgolette">"</pc> Postcard <choice><abbr>No.</abbr><expan resp="#SDGMM">number</expan></choice> <num>9479</num>
+                        </stamp></p>
+                        <p><stamp type="typography" facs="#ottavaTypo127">
+                            ART PUBLISHERS TO THEIR MAJESTIES THE KING &amp; QUEEN<pc type="punto">.</pc>
+                        </stamp></p>
+                        <p><stamp type="typography" facs="#nonaTypo127">
+                            After the originale painting by <persName><choice><abbr>H.J.</abbr><expan resp="#SDGMM">Henry John</expan></choice> Dobson</persName><pc type="virgola">,</pc> <abbr>A.R.C.A.</abbr><pc type="virgola">,</pc> <abbr>R.S.W.</abbr>
+                        </stamp></p>
+                        <p><stamp type="typography" facs="#decimaTypo127">
+                            By Appointment<pc type="punto">.</pc>
+                        </stamp></p>
+                        <p><stamp type="typography" facs="#undicesimaTypo127">
+                            The Bairnie<pc type="apostrofo">'</pc> Breakfast<pc type="punto">.</pc>
+                        </stamp></p>
+                        <p><stamp type="typography" facs="#dodicesimaTypo127">
+                            <lb n="1"/><pc type="virgolette">"</pc>The simple feast brings health and joy <pc type="tratto">-</pc> 
+                            <lb n="2"/>For sweet contentment lingers there <pc type="tratto">-</pc>
+                            <lb n="3"/>And pampered palate might desire
+                            <lb n="4"/>Their relish for the family fare<pc type="punto">.</pc><pc type="virgolette">"</pc>
+                        </stamp></p>   
+                    </div>
+
+                    <div type="message" style="writing-mode: vertical-rl; text-orientation: mixed">
+                        <opener>
+                            <dateline n="1" facs="#luogoData127">
+                                <placeName ref="#MO">Modena</placeName> <pc type="virgola">,</pc>
+                                <distinct>li</distinct>
+                                <date when="1917-07-28"><num>28</num><pc type="barra">/</pc><num>7</num><pc>-</pc><choice><abbr>17</abbr><expan resp="#SDGMM">1917</expan></choice></date><pc type="tratto">-</pc>
+                            </dateline>
+                        </opener>
+
+                        <p>
+                        
+                            <lb n="2"/><span facs="#primaRiga127">Pensieri affettuosi</span>
+                            <lb n="3"/><span facs="#secondaRiga127">mi avvicinano a te</span>
+                            
+                        </p>
+
+                        <closer>
+                            <signed>
+                            
+                                <lb n="4"/><span facs="#terzaRiga127"><persName ref="#GC">Giovannino</persName></span>
+                        
+                            </signed>
+                        </closer>
+                    </div>
+
+                    <div type="destination">
+                        <p>
+                            <!-- stamps -->
+                            <stamp type="postmark" facs="#timbro127">
+                                <mentioned rend="circle"><gap reason="illegible" agent="faded"/></mentioned>
+                                <date when="1917-07-28"><unclear reason="faded">28.7.1917</unclear></date>
+                                <time>
+                                    <gap reason="illegible" agent="faded"/>
+                                </time>
+                            </stamp>
+                            <stamp type="postage" facs="#timbro127">francobollo da 5 centesimi del Regno d'Italia</stamp>
+                        </p>
+
+                        <p>
+                            <address>
+                                <addrLine n="5" facs="#primaRigaAddr127"><choice><abbr>Gent<am>.</am></abbr><expan resp="#SDGMM">Gentile</expan></choice> <choice><abbr>Sig<am>-</am></abbr><expan resp="#SDGMM">Signora</expan></choice></addrLine>
+                                <addrLine n="6" facs="#secondaRigaAddr127"><persName ref="#OT">Oliva Turtura</persName></addrLine>
+                                <addrLine n="7" facs="#terzaRigaAddr127">Via Girolamo Rossi 58</addrLine>
+                                <addrLine n="8" facs="#quartaRigaAddr127"><placeName ref="#RV">Ravenna</placeName></addrLine>
+                            </address>
+                        </p>
+                    </div>
+                </div>
+            </body>
+        </text>
+    </TEI>
+
+    <TEI xml:id="c207">
+        <teiHeader>
+            <!-- Metadati relativi alla seconda cartolina -->
+            <fileDesc>
+                <titleStmt>
+                    <!-- Non corrisponde completamente alla voce TITOLO della tabella perché si tratta del titolo della edizione digitale -->
+                    <title>Donna canta ad un uccellino - Edizione digitale</title>
+                </titleStmt>
+                <publicationStmt>
+                    <publisher>Unipi</publisher>
+                    <pubPlace>Pisa</pubPlace>
+                </publicationStmt>
+                
+                <!-- Tutto ciò che non rientra nella codifica -->
+                <notesStmt>
+                    <note>Sul fronte riporta stampato il nome dell'artista (Mauzano). Sul retro troviamo la stampa "Proprietà artistica riservata - Uff. Rev. Stampa Milano 30-7-17 N 1679"</note>
+                </notesStmt>
+
+                <sourceDesc>
+                    <bibl>
+                        <!-- TITOLO quello che si ricava dalla cartolina; se un documento composto da immagini non presenta un titolo o altri elementi considerabili come titolo, si formula un titolo sintetico registrandolo entro parentesi quadre ma indicando dentro la codifica -->
+                        <title type="custom" resp="#ES">[Donna canta ad un uccellino]</title>
+                        <!-- Produzione: chi ha prodotto / pubblicato la cartolina. Se non presente togliere il tag -->
+                        <publisher>Uff. Rev. Stampa</publisher>
+                        <!-- Luogo -->
+                        <pubPlace>Milano</pubPlace>
+                        <!-- Cronologia, attenzione si riferisce solo alla data di stampa -->
+                        <date>1917</date>
+                    </bibl>
+
+                    <msDesc>
+                        <!-- collocazione specifica -->
+                        <msIdentifier>
+                            <country>Italia</country>
+                            <settlement>La Spezia (SP)</settlement>
+                            <repository>Museo Civico Etnografico "Giovanni Podenzana", Sezione dei cimeli garibaldini e della Prima Guerra Mondiale</repository>
+                            <!-- codice identificativo -->
+                            <idno>7694_207_001/002</idno>
+                        </msIdentifier>
+
+                        <!-- Informazioni sul contenuto della cartolina -->
+                        <!-- DESCRIZIONE -->
+                        <msContents>
+                            <summary>Cartolina Artistica</summary>
+                            <textLang>Italiano</textLang>
+                        </msContents>
+
+                        <physDesc>
+                            <objectDesc>
+                                <supportDesc>
+                                    <support>
+                                        <objectType>Cartolina</objectType>
+                                        <!-- Materiali -->
+                                        <material>Carta</material>
+                                        <!-- Dimensione -->
+                                        <dimensions unit="cm">
+                                            <height>9</height>
+                                            <width>14</width>
+                                        </dimensions>
+                                        <stamp>francobollo - Regno d'Italia</stamp>
+                                        
+                                    </support>
+
+                                    <!-- Conservazione
+                                    buono = non occorrono interventi di restauro;
+                                    discreto = perfettamente leggibile in tutte le componenti ma con rischi di deterioramento per usura;
+                                    mediocre = perfettamente leggibile, ma mancano alcune sue parti;
+                                    cattivo = intaccato da parassiti o deteriorato da cattivi interventi passati o mancanti di parti rilevanti, necessita di restauro -->
+                                    <condition>Buono, non occorrono interventi di restauro</condition>
+                                </supportDesc>
+                            </objectDesc>
+                        </physDesc>
+                    </msDesc>
+                </sourceDesc>
+            </fileDesc>
+
+            <profileDesc>
+                <correspDesc>
+                    <correspAction type="sent">
+                        <persName ref="#GC">Giovanni Coliola</persName>
+                        <placeName ref="#MO">Modena</placeName>
+                        <!-- Data di invio da timbro (postage) o da manoscritto (writing) -->
+                        <date type="writing" when="1918-04-05">1918/04/05</date>
+                    </correspAction>
+                    <correspAction type="received">
+                        <persName ref="#OT">Oliva Turtura</persName>
+                        <placeName ref="#RA">Ravenna</placeName>
+                    </correspAction>
+                </correspDesc>
+                
+                <textClass>
+                    <keywords>
+                        <!-- soggettario -->
+                        <!-- tipologia -->
+                        <!-- descrizione -->
+                        <term>Cartolina</term>
+                        <term>Cartolina Artistica</term>
+                        <term>Coppia di innamorati</term>
+                    </keywords>
+                </textClass>
+
+                <langUsage>
+                    <language ident="it-IT">italiano</language>
+                </langUsage>
+            </profileDesc>
+        
+        </teiHeader>
+
+        <facsimile>
+            <!-- Fronte -->
+            <surface type="fronte" xml:id="fronte207">
+                <graphic url="IMG/207F.jpg"/>
+            </surface>
+            <!-- Retro -->
+            <surface type="retro" xml:id="retro207">
+                <graphic url="IMG/207R.jpg"/>
+                <zone xml:id="idno207" ulx="444" uly="36" lrx="517" lry="92"/>
+                <zone xml:id="typoVerticale207" ulx="307" uly="10" lrx="325" lry="407" />
+                <zone xml:id="typoOrizzontale207" ulx="298" uly="409" lrx="338" lry="423" />
+                <zone xml:id="luogoData207" ulx="238" uly="55" lrx="301" lry="377" />
+                <zone xml:id="primaRiga207" ulx="181" uly="36" lrx="227" lry="382" />
+                <zone xml:id="secondaRiga207" ulx="124" uly="113" lrx="165" lry="264" />
+                <zone xml:id="terzaRiga207" ulx="42" uly="34" lrx="133" lry="399" />
+                <zone xml:id="timbro207" ulx="539" uly="7" lrx="676" lry="149" />
+                <zone xml:id="primaRigaAddr207" ulx="331" uly="137" lrx="611" lry="213" />
+                <zone xml:id="secondaRigaAddr207" ulx="330" uly="216" lrx="679" lry="282" />
+                <zone xml:id="terzaRigaAddr207" ulx="330" uly="284" lrx="687" lry="328" />
+                <zone xml:id="quartaRigaAddr207" ulx="408" uly="339" lrx="675" lry="419" />   
+            </surface>
+        </facsimile>
+
+        <!-- DEFINIZIONE -->
+        <text type="cartolina" xml:id="cartolina207">
+            <!-- TRASCRIZIONE -->
+            <body>
+                <div type="fronte">
+                    <figure>
+                        <graphic url="IMG/207F.jpg"/>
+                        <figDesc>
+                            L'immagine rappresenta una donna di bell'aspetto, dai capelli rossi, raccolti, e con una vestaglia a fiori, intenta a fischiettare rivolta ad un canarino che si trova posato sulla sua mano. Nell'illustrazione, in basso a sinistra è presente la firma dell'artista, Mauzano.
+                            <mentioned>Mauzan</mentioned>
+                        </figDesc>
+                        <head>Donna canta ad un uccellino - Mauzano</head>
+                    </figure>
+                </div>
+
+                <div type="retro">
+                    <div type="codice">
+                        <p>
+                            <num type="cardinal">
+                                <idno facs="#idno207">207</idno>
+                            </num>
+                        </p>
+                    </div>
+
+                    <div type="typography">
+                        <p><stamp type="typography" facs="#typoVerticale207">
+                            Proprietà artistica riservata <pc type="tratto">-</pc> <choice><abbr>Uff. Rev. Stampa</abbr><expan resp="#SDGMM">Ufficio di revisione della Stampa</expan></choice>  <placeName>Milano</placeName><pc type="punto">.</pc> <date>30-7-17</date> N<pc type="punto">.</pc> <num>1679</num>
+                        </stamp></p>
+                        <p><stamp type="typography" facs="#typoOrizzontale207">
+                            <num>42</num><pc type="tratto">-</pc><num>4</num>
+                        </stamp></p>
+                    </div>
+
+                    <div type="message" style="writing-mode: vertical-rl; text-orientation: mixed">
+                        <opener>
+                            <dateline n="1" facs="#luogoData207">
+                                <placeName ref="#MO">Modena</placeName><pc type="virgola">,</pc> 
+                                <distinct>li</distinct> 
+                                <date when="1918-04-05"><num>5</num><pc type="barra">-</pc><num>4</num><pc type="barra">/</pc><choice><abbr>18</abbr><expan resp="#SDGMM">1918</expan></choice></date><pc type="punto">.</pc>
+                            </dateline>
+                        </opener>
+                        <p>
+                            
+                            <lb n="2"/><span facs="#primaRiga207">Mille pensieri belli</span>
+                        
+                        </p>
+                        <closer>
+                            <signed rend="align(center)">
+                            
+                                <lb n="3"/><span facs="#secondaRiga207">tuo</span>
+                                <lb n="4"/><span facs="#terzaRiga207"><persName ref="#GC">Giovannino</persName></span>
+                            
+                            </signed>
+                        </closer>  
+                    </div>
+
+                    <div type="destination">
+                        <p>
+                            <!-- stamps -->
+                            <stamp type="postmark" facs="#timbro207">
+                                <mentioned rend="circle"><unclear reason="faded">* MODE</unclear></mentioned>
+                                <date>
+                                    <gap reason="illegible" agent="faded"/>
+                                </date>
+                                <time>
+                                    <gap reason="illegible" agent="faded"/>
+                                </time>
+                            </stamp>
+                            <stamp type="postage" facs="#timbro207">francobollo da 5 centesimi del Regno d'Italia</stamp>
+                        </p>
+                        <p>
+                            <address>
+                                <addrLine n="5" facs="#primaRigaAddr207"><choice><abbr>Gent</abbr><expan resp="#SDGMM">Gentile</expan></choice> <choice><abbr>Sig na</abbr><expan resp="#SDGMM">Signorina</expan></choice></addrLine>
+                                <addrLine n="6" facs="#secondaRigaAddr207"><persName ref="#OT">Oliva Turtura</persName></addrLine>
+                                <addrLine n="7" facs="#terzaRigaAddr207">Via Girolamo Rossi 58</addrLine>
+                                <addrLine n="8" facs="#quartaRigaAddr207"><placeName ref="#RV">Ravenna</placeName></addrLine>
+                            </address>
+                        </p>
+                    </div>
+                </div>
+            </body>
+        </text>
+    </TEI>
+
+    <TEI xml:id="c211"> 
+        <teiHeader>
+            <!-- metadati relativi alla terza cartolina -->
+            <fileDesc>
+                <titleStmt>
+                    <!-- Non corrisponde completamente alla voce TITOLO della tabella perché si tratta del titolo della edizione digitale -->
+                    <title>Donna con cane - Edizione digitale</title>
+                </titleStmt>
+                <publicationStmt>
+                    <publisher>Unipi</publisher>
+                    <pubPlace>Pisa</pubPlace>
+                </publicationStmt>
+
+                <!-- Tutto ciò che non rientra nella codifica -->
+                <notesStmt>
+                    <note>
+                        Sul fronte riporta stampato il nome dell'artista (Mauzano) . Sul retro troviamo la stampa "Proprietà artistica riservata - Uff. Rev. Stampa Milano 30-7-17 N 1679"
+                    </note>
+                </notesStmt>
+
+                <sourceDesc>
+                    <bibl>
+                        <!-- TITOLO quello che si ricava dalla cartolina; se un documento composto da immagini non presenta un titolo o altri elementi considerabili come titolo, si formula un titolo sintetico registrandolo entro parentesi quadre ma indicando dentro la codifica -->
+                        <title type="custom" resp="#ES">[Donna con cane]</title>
+                        <!-- Produzione: chi ha prodotto / pubblicato la cartolina. Se non presente togliere il tag -->
+                        <publisher>Uff. Rev. Stampa</publisher>
+                        <!-- Luogo -->
+                        <pubPlace>Milano</pubPlace>
+                        <!-- Cronologia, attenzione si riferisce solo alla data di stampa -->
+                        <date>1917</date>
+                    </bibl>
+
+                    <msDesc>
+                        <!-- collocazione specifica -->
+                        <msIdentifier>
+                            <country>Italia</country>
+                            <settlement>La Spezia (SP)</settlement>
+                            <repository>Museo Civico Etnografico "Giovanni Podenzana", Sezione dei cimeli garibaldini e della Prima Guerra Mondiale</repository>
+                            <!-- codice identificativo -->
+                            <idno>7694_211_001/002</idno>
+                        </msIdentifier>
+
+                        <!-- Informazioni sul contenuto della cartolina -->
+                        <!-- DESCRIZIONE -->
+                        <msContents>
+                            <summary>Cartolina Artistica</summary>
+                            <textLang>Italiano</textLang>
+                        </msContents>
+
+                        <physDesc>
+                            <objectDesc>
+                                <supportDesc>
+                                    <support>
+                                        <objectType>Cartolina</objectType>
+                                        <!-- Materiali -->
+                                        <material>Carta</material>
+                                        <!-- Dimensione -->
+                                        <dimensions unit="cm">
+                                            <height>9</height>
+                                            <width>14</width>
+                                        </dimensions>
+                                        <stamp>francobollo - Regno d'Italia</stamp>
+                                        
+                                    </support>
+
+                                    <!-- Conservazione
+                                    buono = non occorrono interventi di restauro;
+                                    discreto = perfettamente leggibile in tutte le componenti ma con rischi di deterioramento per usura;
+                                    mediocre = perfettamente leggibile, ma mancano alcune sue parti;
+                                    cattivo = intaccato da parassiti o deteriorato da cattivi interventi passati o mancanti di parti rilevanti, necessita di restauro -->
+                                    <condition>Buono, non occorrono interventi di restauro</condition>
+                                </supportDesc>
+                            </objectDesc>
+                        </physDesc>
+                    </msDesc>
+                </sourceDesc>
+            </fileDesc>
+
+            <profileDesc>
+                <correspDesc>
+                    <correspAction type="sent">
+                        <persName ref="#GC">Giovanni Coliola</persName>
+                        <placeName ref="#MO">Modena</placeName>
+                        <!-- Data di invio da timbro (postage) o da manoscritto (writing) -->
+                        <date type="writing" when="1918-04-05">1918/04/05</date>
+                    </correspAction>
+                    <correspAction type="received">
+                        <persName ref="#OT">Oliva Turtura</persName>
+                        <placeName ref="#RV">Ravenna</placeName>
+                    </correspAction>
+                </correspDesc>
+                
+                <textClass>
+                    <keywords>
+                        <!-- soggettario -->
+                        <!-- tipologia -->
+                        <!-- descrizione -->
+                        <term>Cartolina</term>
+                        <term>Cartolina Artistica</term>
+                        <term>Coppia di innamorati</term>
+                    </keywords>
+                </textClass>
+
+                <langUsage>
+                    <language ident="it-IT">italiano</language>
+                </langUsage>
+            </profileDesc>
+        
+        </teiHeader>
+
+        <facsimile>
+            <!-- Fronte -->
+            <surface type="fronte" xml:id="fronte211">
+                <graphic url="IMG/211F.jpg"/>
+            </surface>
+            <!-- Retro -->
+            <surface type="retro" xml:id="retro211">
+                <graphic url="IMG/211R.jpg"/>
+                <zone xml:id="idno211" ulx="370" uly="19" lrx="440" lry="67"/>
+                <zone xml:id="typoVerticale211" ulx="301" uly="8" lrx="320" lry="401" />
+                <zone xml:id="typoOrizzontale211" ulx="296" uly="406" lrx="329" lry="419" />
+                <zone xml:id="luogoData211" ulx="245" uly="19" lrx="286" lry="308" />
+                <zone xml:id="primaRiga211" ulx="180" uly="34" lrx="222" lry="327" />
+                <zone xml:id="secondaRiga211" ulx="124" uly="118" lrx="158" lry="264" />
+                <zone xml:id="terzaRiga211" ulx="42" uly="46" lrx="115" lry="359" />
+                <zone xml:id="timbro211" ulx="470" uly="5" lrx="683" lry="155" />
+                <zone xml:id="primaRigaAddr211" ulx="351" uly="148" lrx="645" lry="215" />
+                <zone xml:id="secondaRigaAddr211" ulx="336" uly="220" lrx="669" lry="280" />
+                <zone xml:id="terzaRigaAddr211" ulx="329" uly="287" lrx="673" lry="339" />
+                <zone xml:id="quartaRigaAddr211" ulx="424" uly="347" lrx="677" lry="416" />   
+            </surface>
+        </facsimile>
+
+        <!-- DEFINIZIONE -->
+        <text type="cartolina" xml:id="cartolina211">
+            <!-- TRASCRIZIONE -->
+            <body>
+                <div type="fronte">
+                    <figure>
+                        <graphic url="IMG/211F.jpg"/>
+                        <figDesc>
+                            L'immagine rappresenta una donna mora dagli occhi azzurri, mentre accarezza un cane. Indossa con un fiocco voluminoso arancione in testa e una rossetto rosso sulle labbra. Nell'illustrazione, in basso a sinistra è presente la firma dell'artista, Mauzano.
+                        <mentioned>Mauzan</mentioned>
+                        </figDesc>
+                        <head>Donna con cane</head>
+                    </figure>
+                </div>
+
+                <div type="retro">
+                    <div type="codice">
+                        <p>
+                            <num type="cardinal">
+                                <idno facs="#idno211">211</idno>
+                            </num>
+                        </p>
+                    </div>
+
+                    <div type="typography">
+                        <p><stamp type="typography" facs="#typoVerticale211">
+                            Proprietà artistica riservata <pc type="tratto">-</pc> <choice><abbr>Uff. Rev. Stampa</abbr><expan resp="#SDGMM">Ufficio di revisione della Stampa</expan></choice>  <placeName>Milano</placeName><pc type="punto">.</pc> <date>30-7-17</date> N<pc type="punto">.</pc> <num>1679</num>
+                        </stamp></p>
+                        <p><stamp type="typography" facs="#typoOrizzontale211">
+                            <num>42</num><pc type="tratto">-</pc><num>2</num>
+                        </stamp></p>
+                    </div>
+
+                    <div type="message" style="writing-mode: vertical-rl; text-orientation: mixed">
+                        <opener>
+                            <dateline n="1" facs="#luogoData211">
+                                <placeName ref="#MO">Modena</placeName><pc type="virgola">,</pc> 
+                                <distinct>li</distinct> 
+                                <date when="1918-04-05"><num>5</num><pc type="barra">/</pc><num>4</num><pc type="punto">.</pc><choice><abbr>18</abbr><expan resp="#SDGMM">1918</expan></choice></date><pc type="punto">.</pc>
+                            </dateline>
+                        </opener>
+                        <p>
+                        
+                            <lb n="2"/><span facs="#primaRiga211">Sempre a te</span>
+                            
+                        </p>
+                        <closer>
+                            <signed rend="align(center)">
+                            
+                                <lb n="3"/><span facs="#secondaRiga211">tuo</span>
+                                <lb n="4"/><span facs="#terzaRiga211"><persName ref="#GC">Giovannino</persName></span>
+                            
+                            </signed>
+                        </closer>  
+                    </div>
+
+                    <div type="destination">
+                        <p>
+                            <!-- stamps -->
+                            <stamp type="postmark" facs="#timbro211">
+                                <mentioned rend="circle"><unclear reason="faded">MODE FERR</unclear></mentioned>
+                                <date when="1918-04-05">-5.4.18</date>
+                                <time>
+                                    <gap reason="illegible" agent="faded"/>
+                                </time>
+                            </stamp>
+                            <stamp type="postage" facs="#timbro211">francobollo da 5 centesimi del Regno d'Italia</stamp>
+                        </p>
+                        <p>
+                            <address>
+                                <addrLine n="5" facs="#primaRigaAddr211"><choice><abbr>Gent</abbr><expan resp="#SDGMM">Gentile</expan></choice> <choice><abbr>Sig na</abbr><expan resp="#SDGMM">Signorina</expan></choice></addrLine>
+                                <addrLine n="6" facs="#secondaRigaAddr211"><persName ref="#OT">Oliva Turtura</persName></addrLine>
+                                <addrLine n="7" facs="#terzaRigaAddr211">Via Girolamo Rossi 58</addrLine>
+                                <addrLine n="8" facs="#quartaRigaAddr211"><placeName ref="#RV">Ravenna</placeName></addrLine>
+                            </address>
+                        </p>
+                    </div>
+                </div>
+            </body>
+        </text>
+    </TEI>
+</teiCorpus>
